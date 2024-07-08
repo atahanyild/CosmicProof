@@ -76,6 +76,8 @@ import (
 	ibckeeper "github.com/cosmos/ibc-go/v8/modules/core/keeper"
 
 	ytubclambdamodulekeeper "github.com/atahanyild/ytubc-lambda/x/ytubclambda/keeper"
+	zkproofmodulekeeper "github.com/atahanyild/ytubc-lambda/x/zkproof/keeper"
+
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 
 	"github.com/atahanyild/ytubc-lambda/docs"
@@ -141,6 +143,7 @@ type App struct {
 	ScopedICAHostKeeper       capabilitykeeper.ScopedKeeper
 
 	YtubclambdaKeeper ytubclambdamodulekeeper.Keeper
+	ZkproofKeeper     zkproofmodulekeeper.Keeper
 	// this line is used by starport scaffolding # stargate/app/keeperDeclaration
 
 	// simulation manager
@@ -280,6 +283,7 @@ func New(
 		&app.GroupKeeper,
 		&app.CircuitBreakerKeeper,
 		&app.YtubclambdaKeeper,
+		&app.ZkproofKeeper,
 		// this line is used by starport scaffolding # stargate/app/keeperDefinition
 	); err != nil {
 		panic(err)

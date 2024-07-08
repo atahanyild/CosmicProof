@@ -1,0 +1,17 @@
+syntax = "proto3";
+package ytubclambda.zkproof;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "ytubclambda/zkproof/params.proto";
+
+option go_package = "github.com/atahanyild/ytubc-lambda/x/zkproof/types";
+
+// GenesisState defines the zkproof module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}

@@ -54,8 +54,11 @@ import (
 	"google.golang.org/protobuf/types/known/durationpb"
 
 	ytubclambdamodulev1 "github.com/atahanyild/ytubc-lambda/api/ytubclambda/ytubclambda/module"
+	zkproofmodulev1 "github.com/atahanyild/ytubc-lambda/api/ytubclambda/zkproof/module"
 	_ "github.com/atahanyild/ytubc-lambda/x/ytubclambda/module" // import for side-effects
 	ytubclambdamoduletypes "github.com/atahanyild/ytubc-lambda/x/ytubclambda/types"
+	_ "github.com/atahanyild/ytubc-lambda/x/zkproof/module" // import for side-effects
+	zkproofmoduletypes "github.com/atahanyild/ytubc-lambda/x/zkproof/types"
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 )
 
@@ -94,6 +97,7 @@ var (
 		circuittypes.ModuleName,
 		// chain modules
 		ytubclambdamoduletypes.ModuleName,
+		zkproofmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/initGenesis
 	}
 
@@ -119,6 +123,7 @@ var (
 		ibcfeetypes.ModuleName,
 		// chain modules
 		ytubclambdamoduletypes.ModuleName,
+		zkproofmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/beginBlockers
 	}
 
@@ -138,6 +143,7 @@ var (
 		ibcfeetypes.ModuleName,
 		// chain modules
 		ytubclambdamoduletypes.ModuleName,
+		zkproofmoduletypes.ModuleName,
 		// this line is used by starport scaffolding # stargate/app/endBlockers
 	}
 
@@ -296,6 +302,10 @@ var (
 			{
 				Name:   ytubclambdamoduletypes.ModuleName,
 				Config: appconfig.WrapAny(&ytubclambdamodulev1.Module{}),
+			},
+			{
+				Name:   zkproofmoduletypes.ModuleName,
+				Config: appconfig.WrapAny(&zkproofmodulev1.Module{}),
 			},
 			// this line is used by starport scaffolding # stargate/app/moduleConfig
 		},
