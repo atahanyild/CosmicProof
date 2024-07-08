@@ -1,0 +1,17 @@
+syntax = "proto3";
+package ytubclambda.ytubclambda;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "ytubclambda/ytubclambda/params.proto";
+
+option go_package = "github.com/atahanyild/ytubc-lambda/x/ytubclambda/types";
+
+// GenesisState defines the ytubclambda module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
