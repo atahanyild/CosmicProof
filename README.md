@@ -6,17 +6,7 @@
 2. [Problem We Solve](#problem-we-solve)
 3. [Tech Stack](#tech-stack)
 4. [Architecture](#architecture)
-5. [Setup and Installation](#setup-and-installation)
-6. [Implementation Details](#implementation-details)
-    - [Proof Generation](#proof-generation)
-    - [State Tree Functionality](#state-tree-functionality)
-    - [Proof Verification](#proof-verification)
-    - [Block Storage and Retrieval](#block-storage-and-retrieval)
-7. [Testing and Validation](#testing-and-validation)
-8. [Use Cases](#use-cases)
-9. [Future Work](#future-work)
-10. [Conclusion](#conclusion)
-11. [References](#references)
+5. [What is different for a Node now](#what-is-different-for-a-node-now)
 
 ## 1. Introduction
 While we are preparing this documentation, there is 21,208,535 blocks in the Cosmos blockchain.Full nodes does not download all the blocks from genesis, so they dont have the historical data. To get a historical data, users need to get the data from "Archive Nodes", but only thing you can do is trusting them.
@@ -42,7 +32,7 @@ No matter what is the amount of blocks you create proof, it has always constant 
 ##### Constant Verification Time
 No matter what is the amount of blocks you create proof, it always require constant (and relativly low) time to verify it. 
 
-## 3. Architecture
+## 4. Architecture
 ![Architecture ](https://i.imgur.com/xIOp4OG.png)
 #### Cosmos SDK
 
@@ -61,13 +51,6 @@ It consists of two main functions:
 -   **Generate New Proof**: This function takes recent block hash as public input,  generates a new zero-knowledge proof for each block by combining the block's hash with the last generated proof.
 -   **Verify Proof**: This function verifies the correctness of the zero-knowledge proof received from the state before it is used for new blocks.
 
-
-## 4. Setup and Installation
-Detail the setup process:
-- Prerequisites
-- Installation steps for Cosmos SDK
-- Installation steps for o1js
-- Configuration settings
 
 ## 5. What is different for a Node now?
 
