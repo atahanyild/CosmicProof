@@ -48,8 +48,7 @@ In this chapter, we will break down and demonstrate our project repo
 -   **Purpose**: The `keeper` package  contains the logic for creating and verifying zeroknowledge proofs and interacting with the module's state. It is responsible for reading from and writing to the store.
 -   **Components**:
     -   **Keeper Struct**: This struct holds references to other necessary parts of the application (e.g., store keys, codec, other module keepers).
-    -   **Methods**: 
-    - 
+    -   **Methods**:  
 	    **1. Generatecosmicproof**
 		This function executes the js code which is written with "o1.js",it creates zeroknowledge proof by using latest proof and current blockhash as inputs then returns a zeroknowledge proof for this block.
 		
