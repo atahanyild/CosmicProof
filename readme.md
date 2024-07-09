@@ -1,6 +1,6 @@
 ## 1. Introduction
 While we are preparing this documentation, there is 21,208,535 blocks in the Cosmos blockchain.Full nodes does not download all the blocks from genesis, so they dont have the historical data. To get a historical data, users need to get the data from "Archive Nodes", but only thing you can do is trusting them.
-With "projectname", we remove the need of trust, providing much better decentrilazation. "Dont trust, verify! "
+With "CosmicProof", we remove the need of trust, providing much better decentrilazation. "Dont trust, verify! "
 
 
 ## 2. Problem We Solve
