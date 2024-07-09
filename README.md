@@ -1,10 +1,11 @@
 
+
 # Project Documentation: Integrating o1js to Cosmos SDK
 
 ## Table of Contents
 1. [Introduction](#introduction)
 2. [Problem We Solve](#problem-we-solve)
-3. [Tech Stack](#tech-stack)
+3. [Why o1js?](#why-o1js)
 4. [Architecture](#architecture)
 5. [What is different for a Node now](#what-is-different-for-a-node-now)
 
@@ -18,11 +19,8 @@ Amount of Archive nodes on Cosmos is not that much. If your app needs historical
 
 With integrating ZKProof mechanism, Every node will keep the proof of the block among all the other data. To be sure if a data is valid, you can simply verify the proof. We implemented that ZKProof mechanism with O1Js. Check the "Tech Stack" part to read more about it.
 
-## 3. Tech Stack
-We implemented our project by writing our own module called "zkproof" to Cosmos SDK. It enables all the chains using CosmosSDK can instantly start using that mechanism.
-We chose O1Js for the Zero-knowledge proof generation and verification functionality because O1js is one of the few projects that can truly aggregate ZKProofs. O1Js is perfect fit because:
-### o1js
-We chose o1js for the Zero-knowledge proof generation and verification functionality because O1js is one of the few projects that can truly aggregate ZKProofs. o1js is perfect fit because:
+## 3. Why o1js?
+We chose o1js for the Zero-knowledge proof generation and verification functionality because o1js is one of the few projects that can truly aggregate ZKProofs. o1js is perfect fit because:
 ##### Infinite Recursion
 Using recursion technology of O1js, Only having the proof of the last block is enough because if you verify it passing the genesis block of the chain as the public input, you can be sure all the blocks in the middle are correct.
 
