@@ -2,11 +2,10 @@ package zkproof
 
 import (
     "encoding/json"
-
     "github.com/cosmos/cosmos-sdk/codec"
     "github.com/cosmos/cosmos-sdk/types/module"
     sdk "github.com/cosmos/cosmos-sdk/types"
-    "github.com/cosmos/cosmos-sdk/client"
+    "github.com/cosmos/cosmos-sdk/x/params"
     "github.com/atahanyild/ytubc-lambda/x/zkproof/keeper"
     "github.com/atahanyild/ytubc-lambda/x/zkproof/types"
 )
@@ -66,7 +65,7 @@ func (am AppModule) LegacyQuerierHandler(cdc *codec.LegacyAmino) sdk.Querier {
 
 func (am AppModule) RegisterServices(cfg module.Configurator) {}
 
-func (am AppModule) InitGenesis(ctx sdk.Context, cdc codec.JSONCodec, data json.RawMessage) []sdk.ValidatorUpdate {
+func (am AppModule) InitGenesis(ctx sdk.Context, cdc codec.JSONCodec, data json.RawMessage) []abci.ValidatorUpdate {
     var genesisState types.GenesisState
     cdc.MustUnmarshalJSON(data, &genesisState)
     return am.Keeper.InitGenesis(ctx, &genesisState)

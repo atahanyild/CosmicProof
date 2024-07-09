@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"cosmossdk.io/log"
-	"github.com/cosmos/cosmos-sdk/store"
+	"cosmossdk.io/store"
 	"cosmossdk.io/store/metrics"
 	storetypes "cosmossdk.io/store/types"
 	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
