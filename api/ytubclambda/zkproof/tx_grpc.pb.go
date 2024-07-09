@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: ytubclambda/zkproof/tx.proto
+// source: ytubclambda/cosmicproof/tx.proto
 
-package zkproof
+package cosmicproof
 
 import (
 	context "context"
@@ -20,7 +20,7 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	Msg_UpdateParams_FullMethodName = "/ytubclambda.zkproof.Msg/UpdateParams"
+	Msg_UpdateParams_FullMethodName = "/ytubclambda.cosmicproof.Msg/UpdateParams"
 )
 
 // MsgClient is the client API for Msg service.
@@ -101,7 +101,7 @@ func _Msg_UpdateParams_Handler(srv interface{}, ctx context.Context, dec func(in
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var Msg_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "ytubclambda.zkproof.Msg",
+	ServiceName: "ytubclambda.cosmicproof.Msg",
 	HandlerType: (*MsgServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
@@ -110,5 +110,5 @@ var Msg_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "ytubclambda/zkproof/tx.proto",
+	Metadata: "ytubclambda/cosmicproof/tx.proto",
 }

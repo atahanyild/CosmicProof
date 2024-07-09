@@ -1,0 +1,17 @@
+syntax = "proto3";
+package ytubclambda.cosmicproof;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "ytubclambda/cosmicproof/params.proto";
+
+option go_package = "github.com/atahanyild/ytubc-lambda/x/cosmicproof/types";
+
+// GenesisState defines the cosmicproof module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}

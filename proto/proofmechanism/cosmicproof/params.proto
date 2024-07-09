@@ -1,0 +1,15 @@
+syntax = "proto3";
+package ytubclambda.cosmicproof;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "github.com/atahanyild/ytubc-lambda/x/cosmicproof/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "ytubclambda/x/cosmicproof/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

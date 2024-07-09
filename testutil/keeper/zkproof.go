@@ -17,11 +17,11 @@ import (
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/atahanyild/ytubc-lambda/x/zkproof/keeper"
-	"github.com/atahanyild/ytubc-lambda/x/zkproof/types"
+	"github.com/atahanyild/ytubc-lambda/x/cosmicproof/keeper"
+	"github.com/atahanyild/ytubc-lambda/x/cosmicproof/types"
 )
 
-func ZkproofKeeper(t testing.TB) (keeper.Keeper, sdk.Context) {
+func cosmicproofKeeper(t testing.TB) (keeper.Keeper, sdk.Context) {
 	storeKey := storetypes.NewKVStoreKey(types.StoreKey)
 
 	db := dbm.NewMemDB()
