@@ -3,7 +3,7 @@ package zkproof
 import (
     sdk "github.com/cosmos/cosmos-sdk/types"
     "github.com/cosmos/cosmos-sdk/abci/types"
-    "github.com/your/module/x/zkproof/keeper"
+    "github.com/atahanyild/ytubc-lambda/x/zkproof/keeper"
 )
 
 func BeginBlocker(ctx sdk.Context, req abci.RequestBeginBlock, k keeper.Keeper) {

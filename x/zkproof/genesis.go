@@ -4,7 +4,7 @@ import (
     "encoding/json"
 
     sdk "github.com/cosmos/cosmos-sdk/types"
-    "github.com/your/module/x/zkproof/types"
+    "github.com/atahanyild/ytubc-lambda/x/zkproof/types"
 )
 
 func DefaultGenesisState() types.GenesisState {

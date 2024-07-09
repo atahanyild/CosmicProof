@@ -2,19 +2,19 @@ package keeper
 
 import (
     "fmt"
-    sdk "github.com/cosmos/cosmos-sdk/types"
-    "github.com/cosmos/cosmos-sdk/store/prefix"
+	sdk "github.com/cosmos/cosmos-sdk/types"
+    "cosmossdk.io/store/prefix"
     "github.com/cosmos/cosmos-sdk/codec"
-    "github.com/cosmos/cosmos-sdk/x/params/types"
+    paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
 )
 
 type Keeper struct {
     storeKey   sdk.StoreKey
     cdc        codec.BinaryCodec
-    paramSpace types.Subspace
+    paramSpace paramtypes.Subspace
 }
 
-func NewKeeper(cdc codec.BinaryCodec, storeKey sdk.StoreKey, paramSpace types.Subspace) Keeper {
+func NewKeeper(cdc codec.BinaryCodec, storeKey sdk.StoreKey, paramSpace paramtypes.Subspace) Keeper {
     return Keeper{
         storeKey:   storeKey,
         cdc:        cdc,

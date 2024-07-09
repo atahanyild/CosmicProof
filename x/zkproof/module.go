@@ -5,8 +5,8 @@ import (
     "github.com/cosmos/cosmos-sdk/codec"
     "github.com/cosmos/cosmos-sdk/types"
     "github.com/cosmos/cosmos-sdk/x/params/types"
-    "github.com/your/module/x/zkproof/keeper"
-    "github.com/your/module/x/zkproof/types"
+    "github.com/atahanyild/ytubc-lambda/x/zkproof/keeper"
+    "github.com/atahanyild/ytubc-lambda/x/zkproof/types"
 )
 
 type AppModuleBasic struct{}
